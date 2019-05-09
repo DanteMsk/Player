@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="play" layoutX="40.0" layoutY="435.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="25.0" prefWidth="51.0" style="-fx-background-radius: 20; -fx-background-color: #995555;" text="play" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="56.0" prefWidth="300.0" style="-fx-background-color: #432452;" />
+      <Slider fx:id="sliderSoundVolume" layoutX="46.0" layoutY="405.0" minorTickCount="10" onMouseDragged="#sliderMouseEvent" prefHeight="14.0" prefWidth="220.0" snapToTicks="true" value="50.0" />
+      <Button fx:id="stop" layoutX="209.0" layoutY="435.0" mnemonicParsing="false" onAction="#stopMusic" prefHeight="25.0" prefWidth="51.0" style="-fx-background-radius: 20; -fx-background-color: #995555;" text="stop" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="pause" layoutX="125.0" layoutY="435.0" mnemonicParsing="false" onAction="#pauseMusic" prefHeight="25.0" prefWidth="51.0" style="-fx-background-radius: 20; -fx-background-color: #995555;" text="pause" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="search" layoutX="209.0" layoutY="76.0" mnemonicParsing="false" onAction="#searchSound" prefHeight="25.0" prefWidth="69.0" style="-fx-background-radius: 8; -fx-background-color: #995555;" text="search" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchSong" layoutX="28.0" layoutY="74.0" prefHeight="25.0" prefWidth="159.0" promptText="название" style="-fx-background-color: #fff; -fx-background-radius: 8;">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </TextField>
+      <SplitPane dividerPositions="0.5" layoutX="152.0" layoutY="315.0" prefHeight="78.0" prefWidth="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="100.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+      <Button fx:id="nextSong" layoutX="41.0" layoutY="321.0" mnemonicParsing="false" onAction="#nextSound" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #995555;" text="next" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="PrevusSong" layoutX="169.0" layoutY="321.0" mnemonicParsing="false" onAction="#prevSound" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #995555;" text="previous" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="add" layoutX="41.0" layoutY="361.0" mnemonicParsing="false" onAction="#openFileChooser" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #995555;" text="add" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete" layoutX="169.0" layoutY="361.0" mnemonicParsing="false" onAction="#DeleteSound" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #995555;" text="delete" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listSounds" layoutX="40.0" layoutY="120.0" prefHeight="186.0" prefWidth="220.0" />
+   </children>
+</AnchorPane>
